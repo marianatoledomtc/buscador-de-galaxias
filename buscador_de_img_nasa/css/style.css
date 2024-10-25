@@ -2,10 +2,15 @@ main {
     min-height: calc(100vh - 160px);
   }
 
-  body {
-    background-image: url("img/background.jpeg");
-  }
 
+
+  body {
+    color: rgb(255, 255, 255);
+    background-image: url("../img/background.jpeg"); /* Subimos un nivel antes de buscar la carpeta img */
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;  }
+  
   #contenedor {
     display: flex;          
     flex-wrap: wrap;       
@@ -15,18 +20,43 @@ main {
   }
   
   .card {
-    border: 1rem;
-    border-color: aqua;
+    color:black;
+    height: 24rem;
+    overflow: hidden;
     flex: 0 1 18rem;      
     margin-bottom: 1rem;   
     border-radius: 1rem;
-    background: rgba( 255, 255, 255, 0.25 );
+    background: rgba(255, 255, 255, 0.342);
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 4px );
 -webkit-backdrop-filter: blur( 4px );
 border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
+
+  .card .card-text {
+    max-height: 6rem; /* Altura máxima para el contenedor de la descripción */
+    overflow-y: auto; /* Muestra un scrollbar solo si el texto excede la altura máxima */
+  }
+
   .card-img-top{
-    border-radius: 1rem;
+
+    object-fit: cover;
+  }
+
+  .card-body {
+    text-align: center;
+  }
+
+   ::-webkit-scrollbar {
+    width: 10px;
+    opacity:  0.5;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(rgb(30, 52, 148), rgb(118, 206, 206));
+    border-radius: 10px;
   }

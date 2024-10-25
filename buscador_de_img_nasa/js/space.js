@@ -54,7 +54,7 @@ function showCards(items) {
 
             card.innerHTML = `
             <div>
-         <img src="${imageUrl}" class="card-img-top" alt="${title}">
+         <img src="${imageUrl}" class="card-img-top border-0" alt="${title}">
          <div class="card-body">
           <h5 class="card-title">${title}</h5>
          <p class="card-text">${description}</p>
