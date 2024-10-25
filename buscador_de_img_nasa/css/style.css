@@ -1,3 +1,32 @@
 main {
     min-height: calc(100vh - 160px);
   }
+
+  body {
+    background-image: url("img/background.jpeg");
+  }
+
+  #contenedor {
+    display: flex;          
+    flex-wrap: wrap;       
+    justify-content: center; 
+    gap: 1rem;             
+    padding: 1rem;
+  }
+  
+  .card {
+    border: 1rem;
+    border-color: aqua;
+    flex: 0 1 18rem;      
+    margin-bottom: 1rem;   
+    border-radius: 1rem;
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+  .card-img-top{
+    border-radius: 1rem;
+  }
